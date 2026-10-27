@@ -20,233 +20,100 @@
   gtag('config', 'AW-17775420534');
 </script>
 
-    <!-- Event snippet for Click Buy Now conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17775420534/CWjzCMzXq9cbEPbI_ZtC',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
-    
 <style>
-
-
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body,html{
-height:100%;
-font-family:'Open Sans',sans-serif;
-}
-
-/* Fundo */
-.page{
-height:100vh;
-background-image:url("https://i.imgur.com/A6jOxaP.jpeg");
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-/* Container */
-.container{
-
-background:rgba(0,0,0,0.65);
-padding:30px;
-border-radius:20px;
-
-width:95%;
-max-width:500px;
-
-text-align:center;
-
-box-shadow:0 0 30px rgba(0,0,0,0.7);
-}
-
-/* Título */
-.title{
-color:white;
-font-size:28px;
-font-weight:700;
-margin-bottom:25px;
-}
-
-/* Botão país */
-.country{
-
-display:flex;
-align-items:center;
-
-background:white;
-margin:15px 0;
-padding:15px;
-
-border-radius:12px;
-
-text-decoration:none;
-color:black;
-
-transition:0.3s;
-
-}
-
-/* Bandeira */
-.flag{
-
-width:60px;
-height:40px;
-
-margin-right:15px;
-
-border-radius:6px;
-
-object-fit:cover;
-
-}
-
-/* Nome */
-.country-name{
-
-font-size:20px;
-font-weight:600;
-
-}
-
-/* Hover */
-.country:hover{
-
-transform:scale(1.05);
-background:#00c3ff;
-color:white;
-
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-.page{
-background-image:url("https://i.imgur.com/OtW6X17.jpeg");
-}
-
-.flag{
-
-width:70px;
-height:50px;
-
-}
-
-.country-name{
-
-font-size:22px;
-
-}
-
-}
-
+:root{--green:#315f43;--green2:#477b58;--sage:#eaf2e9;--cream:#fbfaf5;--ink:#1d2b22;--muted:#58665c;--line:#dce7dc;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}.topline{background:var(--green);color:#fff;text-align:center;padding:9px 16px;font-size:.82rem;letter-spacing:.04em}
+header{padding:20px 5%;display:flex;justify-content:center;align-items:center;border-bottom:1px solid var(--line);background:#fff}
+.brand{font-family:Georgia,serif;font-size:2rem;font-weight:700;letter-spacing:-.05em;color:var(--green);text-decoration:none}
+main{max-width:1100px;margin:auto;padding:32px 22px 70px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center;background:linear-gradient(135deg,#f1f6ed,#fff);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,5vw,55px);overflow:hidden}
+.eyebrow{display:inline-block;color:var(--green);background:#dcebdc;border-radius:999px;padding:6px 12px;font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+h1{font:700 clamp(2.3rem,5vw,4.2rem)/1.06 Georgia,serif;letter-spacing:-.04em;margin:18px 0}
+.lead{font-size:1.12rem;color:var(--muted);max-width:580px}
+.product{width:100%;max-width:470px;height:auto;display:block;margin:auto;filter:drop-shadow(0 20px 25px #243c2520)}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#2f7046;color:white;text-decoration:none;padding:16px 24px;border-radius:9px;font-weight:800;margin:18px 0 8px;box-shadow:0 8px 18px #315f4325;transition:transform .18s,background .18s}
+.cta:hover{background:#244f35;transform:translateY(-2px)}.micro{font-size:.82rem;color:var(--muted)}
+.points{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.pill{border:1px solid var(--line);border-radius:999px;background:#fff;padding:7px 12px;font-size:.85rem;color:#385742}
+section{padding:55px 0}.sectionhead{text-align:center;max-width:700px;margin:0 auto 28px}h2{font:700 clamp(1.8rem,3.6vw,2.8rem)/1.15 Georgia,serif;letter-spacing:-.025em;margin:0 0 12px}.sectionhead p,.muted{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:23px}.num{width:38px;height:38px;border-radius:12px;background:var(--sage);display:grid;place-items:center;color:var(--green);font-weight:900;margin-bottom:14px}.card h3{margin:0 0 8px;font-size:1.05rem}.card p{margin:0;color:var(--muted);font-size:.94rem}
+.feature{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:center;background:#eaf2e9;border-radius:22px;padding:clamp(22px,4vw,42px)}.feature h2{color:var(--green)}.ingredients{display:grid;grid-template-columns:1fr 1fr;gap:12px}.ingredient{background:#fff;border:1px solid #d8e5d8;border-radius:12px;padding:15px}.ingredient strong{display:block;color:var(--green);margin-bottom:3px}.ingredient span{font-size:.9rem;color:var(--muted)}
+.note{font-size:.84rem;color:var(--muted);border-left:3px solid #a9c7a9;padding-left:13px;margin-top:18px}
+.faq{max-width:800px;margin:auto}.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:10px 0}.faq summary{cursor:pointer;font-weight:750}.faq p{color:var(--muted);margin-bottom:0}
+.bottom{text-align:center;background:var(--green);color:white;border-radius:22px;padding:clamp(28px,5vw,52px)}.bottom p{color:#e2eee3;max-width:640px;margin:12px auto}.bottom .cta{background:#fff;color:var(--green)}.bottom .cta:hover{background:#eaf2e9}
+footer{text-align:center;padding:25px 16px;color:#68746b;font-size:.8rem}footer a{color:var(--green)}
+@media(max-width:760px){.hero,.feature{grid-template-columns:1fr}.hero-copy{order:1}.hero-visual{order:0}.product{max-width:340px}.cards{grid-template-columns:1fr}.ingredients{grid-template-columns:1fr 1fr}main{padding:22px 14px 45px}.brand{font-size:1.75rem}}
+@media(max-width:420px){.ingredients{grid-template-columns:1fr}.cta{width:100%;text-align:center}}
 </style>
-
 </head>
-
 <body>
+<div class="topline">A CLOSER LOOK AT DAILY ORAL WELLNESS</div>
+<header><a class="brand" href="#top" aria-label="ProDentim home">ProDentim</a></header>
+<main id="top">
+  <div class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Oral probiotic support</span>
+      <h1>What if oral care started with the balance of your mouth?</h1>
+      <p class="lead">Meet ProDentim, a chewable oral probiotic supplement formulated with probiotic strains and selected nutrients to support teeth and gum health as part of your everyday routine.</p>
+      <a class="cta" href="https://49566-y9n0t8031e4fi-olml51.hop.clickbank.net" target="_blank" rel="noopener noreferrer">Explore ProDentim on the Official Site <span aria-hidden="true">→</span></a>
+      <div class="micro">See the product details, ingredients, available packages and current terms on the seller's website.</div>
+      <div class="points"><span class="pill">3.5 billion probiotics*</span><span class="pill">Chewable format</span><span class="pill">Daily oral-care routine</span></div>
+    </div>
+    <div class="hero-visual">
+      <img class="product" src="https://prodentim101.com/statics/img/prodentim-strawberry.png" alt="ProDentim supplement bottles with strawberry imagery" fetchpriority="high">
+    </div>
+  </div>
 
-<div class="page">
+  <section>
+    <div class="sectionhead">
+      <h2>The detail worth knowing</h2>
+      <p>Your mouth has its own ecosystem of microorganisms. ProDentim is designed around the idea of supporting that oral environment—not replacing the basics of dental care.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="num">01</div><h3>A probiotic-focused formula</h3><p>The sales page describes a blend containing 3.5 billion probiotic strains. Check the current product label and serving information for the exact formulation.</p></article>
+      <article class="card"><div class="num">02</div><h3>Selected ingredients</h3><p>The product presentation lists strains such as Lactobacillus paracasei and Lactobacillus reuteri, alongside other nutrients.</p></article>
+      <article class="card"><div class="num">03</div><h3>Designed for a simple routine</h3><p>The seller describes ProDentim as a chewable tablet. Follow the label directions and keep brushing, flossing and regular dental visits in your routine.</p></article>
+    </div>
+  </section>
 
-<div class="container">
+  <section class="feature">
+    <div>
+      <span class="eyebrow">Inside the formula</span>
+      <h2>Get familiar with the ingredients</h2>
+      <p class="muted">The product's sales presentation highlights probiotic strains and a blend of nutrients. Ingredient presence alone does not guarantee a particular result.</p>
+      <a class="cta" href="https://49566-y9n0t8031e4fi-olml51.hop.clickbank.net" target="_blank" rel="noopener noreferrer">View the full product details →</a>
+    </div>
+    <div class="ingredients">
+      <div class="ingredient"><strong>Lactobacillus paracasei</strong><span>A probiotic strain listed in the product presentation.</span></div>
+      <div class="ingredient"><strong>Lactobacillus reuteri</strong><span>Another probiotic strain named by the seller.</span></div>
+      <div class="ingredient"><strong>B. lactis BL-04®</strong><span>A probiotic strain included in the advertised formula.</span></div>
+      <div class="ingredient"><strong>Inulin &amp; peppermint</strong><span>Additional ingredients described on the product page.</span></div>
+    </div>
+  </section>
 
-<div class="title">
-Select Your Country
-</div>
+  <section>
+    <div class="sectionhead"><h2>Before you decide</h2><p>A few useful points to check directly with the seller.</p></div>
+    <div class="faq">
+      <details><summary>Where can I see the current price and packages?</summary><p>Use the button below to open the seller's page. Prices, package options, shipping and promotions may change, so verify the current terms before ordering.</p></details>
+      <details><summary>Does ProDentim replace brushing or dental treatment?</summary><p>No. A supplement should not replace brushing with fluoride toothpaste, flossing, professional dental care or treatment recommended by your dentist.</p></details>
+      <details><summary>What if I take medication or have a health condition?</summary><p>Review the full ingredient list and ask a qualified healthcare professional before using a supplement, especially if you take medication, are pregnant, or have an underlying health condition.</p></details>
+    </div>
+  </section>
 
-<a class="country"
-href="#"
-onclick="redirectWithTracking('https://83371csdqyx4331nun55ozpn1w.hop.clickbank.net'); return false;">
-
-
-<img class="flag"
-src="https://flagcdn.com/w320/us.png">
-
-<div class="country-name">
-United States
-</div>
-
-</a>
-
-
-<a class="country"
-href="#"
-onclick="redirectWithTracking('https://83371csdqyx4331nun55ozpn1w.hop.clickbank.net'); return false;">
-
-
-<img class="flag"
-src="https://flagcdn.com/w320/gb.png">
-
-<div class="country-name">
-United Kingdom
-</div>
-
-</a>
-
-
-<a class="country"
-href="#"
-onclick="redirectWithTracking('https://83371csdqyx4331nun55ozpn1w.hop.clickbank.net'); return false;">
-
-
-<img class="flag"
-src="https://flagcdn.com/w320/un.png">
-
-<div class="country-name">
-Global (Other Countries)
-</div>
-
-</a>
-
-PROVADENT
-</div>
-
-</div>
-<script>
-function getParam(p){
-  var url = new URL(window.location.href);
-  return url.searchParams.get(p);
-}
-
-var gclid = getParam('gclid');
-if(gclid){
-  localStorage.setItem('gclid', gclid);
-}
-</script>
-<script>
-function redirectWithTracking(baseUrl){
-
-  var gclid = localStorage.getItem('gclid');
-
-  if(gclid){
-    baseUrl += (baseUrl.includes('?') ? '&' : '?') + 'gclid=' + gclid;
-  }
-
-  gtag_report_conversion(baseUrl);
-}
-</script>
-    
+  <section class="bottom">
+    <span class="eyebrow">Learn more</span>
+    <h2>Curious whether ProDentim fits your routine?</h2>
+    <p>Review the official product information, full ingredients, usage directions, current package options and refund terms before making a decision.</p>
+    <a class="cta" href="https://49566-y9n0t8031e4fi-olml51.hop.clickbank.net" target="_blank" rel="noopener noreferrer">Visit the ProDentim Website →</a>
+    <div class="micro" style="color:#e2eee3">Please review all terms on the seller's website before purchasing.</div>
+  </section>
+</main>
+<footer>
+  <p><strong>Informational notice:</strong> This page is an independent product introduction and is not medical advice. Dietary supplements are not intended to diagnose, treat, cure or prevent disease. Individual experiences vary. The product and its claims have not been independently verified by this page.</p>
+  <p>Product name and imagery are used to identify the product. <a href="https://49566-y9n0t8031e4fi-olml51.hop.clickbank.net" target="_blank" rel="noopener noreferrer">Check the seller's website for current information.</a></p>
+</footer>
 </body>
 </html>
-
 
 
 
